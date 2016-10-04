@@ -108,7 +108,13 @@
         $scope.isEditing = false;
     }
 
+    function isSelectedBookmark(bookmarkId) {
+        return $scope.editedBookmark !== null &&
+            $scope.editedBookmark.id === bookmarkId;
+    }
+
     $scope.setEditedBookmark = setEditedBookmark;
     $scope.updateBookmark = updateBookmark;
+    $scope.isSelectedBookmark = isSelectedBookmark;
 
 });
