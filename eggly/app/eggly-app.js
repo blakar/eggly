@@ -27,5 +27,12 @@
         $scope.currentCategory = category;
     }
 
+    function isCurrentCategory(category)
+    {
+        return $scope.currentCategory !== null &&
+            category.name === $scope.currentCategory.name;
+    }
+
     $scope.setCurrentCategory = setCurrentCategory;
+    $scope.isCurrentCategory = isCurrentCategory;
 });
